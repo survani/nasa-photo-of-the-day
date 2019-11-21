@@ -1,0 +1,60 @@
+$displaycolor: red;
+
+body {
+    background: black;
+    .App {
+        h1 {
+            color: whitesmoke;
+        }
+    }
+    .display-picture {
+        display: flex;
+        justify-content: space-evenly;
+        flex-flow: wrap;
+
+        color: black ;
+        .pic-day {
+            width: 50rem;
+            height: 30rem;
+            border: 5px solid white;
+            margin-top: 1.2rem;
+        }
+        .desc-of-pic {
+            width: 55rem; 
+            h2 {
+                text-align: center ;
+                border: 5px solid whitesmoke;
+                background: whitesmoke ;
+                border-radius: 10%;
+
+            }
+            p {
+                border: 5px solid whitesmoke;
+                background: whitesmoke ;
+                border-radius: 4%;
+                padding: 2rem;
+            }
+        }
+    }
+    .button-container {
+        display: flex;
+        justify-content: space-evenly;
+        width: 45.5%;
+        button {
+            margin: 1rem 0rem 0rem 5rem;
+            background: whitesmoke;
+            border: .2rem solid grey;
+            padding: 1rem;
+        }
+    }
+    
+}
+
+
+
+
+.loader {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
