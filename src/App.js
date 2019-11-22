@@ -2,6 +2,10 @@ import React, { useState, useEffect } from 'react';
 import "./App.css";
 import axios from 'axios';
 import Loader from 'react-loader-spinner';
+import HeaderH1 from './Styling/headerstyle';
+import NavContainer, { AnchorContainer } from './Styling/NavStyle';
+import Image, { InnerImage, InnerTextContainer } from "./Styling/Image";
+import Button, { ButtonContainer } from './Styling/Buttons';
 import './allstyles.scss';
 
 
@@ -37,28 +41,29 @@ function App() {
     );
   return (
     <React.Fragment>
-      <div className='App'>
+
+      <NavContainer>
+        <AnchorContainer href='http://localhost:3000/'>Home</AnchorContainer>
+        <AnchorContainer href='https://apod.nasa.gov/apod/astropix.html'>About Project</AnchorContainer>
+        <AnchorContainer href='https://apod.nasa.gov/apod/astropix.html'>Nasa Website</AnchorContainer>
+      </NavContainer>
+
+      <HeaderH1>
         <h1>Nasa Picture of the Day </h1>
-      </div>
+      </HeaderH1>
 
-      <section className='display-picture'>
-        <img src={nasaPics.url} className='pic-day' alt='Pictures' height='250px' width='250px' />
-        <div className = 'desc-of-pic'>
-        <h2>About This Image</h2>
-        <p>{nasaPics.explanation}</p>
-        </div>
-      </section>
-      <section className = 'by-of-pic'>
-        <div className='button-container'>
-        <button>Title: {nasaPics.title}</button>
-        <button>By: {nasaPics.copyright}</button>
-        <button>Day: {nasaPics.date}</button>
-        </div>
-        </section>
-
-      
-
-
+      <Image>
+        <InnerImage src={nasaPics.url} className='pic-day' alt='Pictures' height='250px' width='250px' />
+      </Image>
+      <InnerTextContainer>
+          <h2>About This Image</h2>
+          <p>{nasaPics.explanation}</p>
+        </InnerTextContainer>
+        <ButtonContainer>
+        <a href='https://en.wikipedia.org/wiki/Simeis_147'><Button>Title: {nasaPics.title}</Button></a>
+        <Button>By: {nasaPics.copyright}</Button>
+        <Button>Day: {nasaPics.date}</Button>
+      </ButtonContainer>
     </React.Fragment>
   );
 }
