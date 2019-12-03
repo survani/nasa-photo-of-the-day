@@ -1,14 +1,21 @@
-import React from "react";
-import "./App.css";
+import React from 'react';
+import './app.scss';
+import PicCard from './components/PicCard';
+
 
 function App() {
+
   return (
-    <div className="App">
-      <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun 🚀!
-      </p>
-    </div>
+    <React.Fragment>
+
+      <div className='navbar-container'>
+        <h1>Nasa Picture of the Day </h1>
+        <a href='http://localhost:3000/'>Home</a>
+        <a href='http://localhost:3000/'>About Project</a>
+        <a href='http://localhost:3000/'>Nasa Website</a>
+      </div>
+      < PicCard />
+    </React.Fragment>
   );
 }
 
